@@ -1,0 +1,73 @@
+<tr>
+  <td class="contentHead"colspan="2" align="center"><span class="fontBold">[head]</span></td>
+</tr>
+<form name="kalenderadmin" enctype='multipart/form-data' method="post" action="?admin=event&amp;do=[do]" onsubmit="return(DZCP.submitButton())">
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[datum_start]:</span></td> 
+  <td class="contentMainFirst" align="center">[dropdown_date_start] [dropdown_time_start]</td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[datum_ende]:</span></td> 
+  <td class="contentMainFirst" align="center">[dropdown_date_ende] [dropdown_time_ende]</td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[event]:</span></td>
+  <td class="contentMainFirst" align="center">
+    <input type="text" name="event" value="[k_event]" class="inputFieldKal_dis"
+    onfocus="this.className='inputFieldKal_en';"
+    onblur="this.className='inputFieldKal_dis';">
+  </td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[autor]:</span></td>
+  <td class="contentMainFirst" align="center">[k_autor]</td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[veranstalter]:</span></td>
+  <td class="contentMainFirst" align="center">
+    <input type="text" name="veranstalter" value="[k_veranstalter]" class="inputFieldKal_dis"
+    onfocus="this.className='inputFieldKal_en';"
+    onblur="this.className='inputFieldKal_dis';">
+  </td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[kat]:</span></td>
+  <td class="contentMainFirst" align="center">
+                <select name="kat" class="dropdown">
+              [k_kat]
+            </select>
+  </td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[ort]:</span></td>
+  <td class="contentMainFirst" align="center">
+    <input type="text" name="ort" value="[k_ort]" class="inputFieldKal_dis"
+    onfocus="this.className='inputFieldKal_en';"
+    onblur="this.className='inputFieldKal_dis';">
+  </td>
+</tr>
+<tr>
+  <td class="contentMainTop"><span class="fontBold">[gmaps]:</span></td>
+  <td class="contentMainFirst" align="center">
+              <label><input class="checkbox" type="checkbox" name="gmaps" value="1" [checked] /> [gmaps_info]</label>
+  </td>
+</tr> 
+<tr>
+        <td class="contentMainTop"><span class="fontBold">[bild]:</span></td>
+        <td class="contentMainFirst" align="center">
+          <input id="bild" name="bild" type="file" />
+        </td>
+      </tr>
+      <tr>
+        <td class="contentMainTop" colspan="2" align="center"><span class="fontBold">[beschreibung]:</span></td>
+      </tr>
+      <tr>
+        <td class="contentMainFirst" colspan="2" align="center">
+          <textarea id="beschreibung" name="beschreibung" cols="0" rows="0" class="editorStyle">[k_beschreibung]</textarea>
+        </td>
+      </tr>
+
+<tr>
+  <td class="contentBottom" colspan="2"><input id="contentSubmit" type="submit" value="[what]" class="submit"></td>
+</tr>
+</form>
