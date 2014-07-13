@@ -164,10 +164,10 @@
         <td class="content">
           <b>Sucht</b> nach:
           <p class="codesearch">
-            <textarea rows="10" wrap="off" readonly>global $db,</textarea></p><br>
-          <b>F&uuml;gt</b> direkt <b>hinter</b> dieser Zeile folgendes ein:
+            <textarea rows="10" wrap="off" readonly>global $db;</textarea></p><br>
+          <b>und macht daraus:
           <p class="codepast">
-            <textarea rows="10" wrap="off">$sql_prefix,</textarea></p><br> 
+            <textarea rows="10" wrap="off">global $db, $sql_prefix;</textarea></p><br> 
 			Sucht nach:
 			<p class="codesearch">
             <textarea rows="10" wrap="off" readonly>$qry = db("SELECT datum,title FROM ".$db['events']." WHERE DATE_FORMAT(FROM_UNIXTIME(datum), '%d.%m.%Y') = '".cal($i).".".$monat.".".$jahr."'");</textarea></p><br>
