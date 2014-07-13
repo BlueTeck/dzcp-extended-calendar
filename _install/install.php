@@ -2,8 +2,10 @@
 ## OUTPUT BUFFER START ##
 include("../inc/buffer.php");
 ## INCLUDES ##
+include(basePath."/inc/debugger.php");
 include(basePath."/inc/config.php");
 include(basePath."/inc/bbcode.php");
+
 ## SETTINGS ##
 $time_start = generatetime();
 lang($language);
@@ -12,7 +14,7 @@ $title = $pagetitle." - ".$where."";
 ## INSTALLER ##
 if(isset($_POST['submit'])) {	
 
-// alte Tabellen/Spalten löschen
+// alte Tabellen/Spalten lï¿½schen
 		db("DROP TABLE IF EXISTS ".$sql_prefix."events_info");
 		db("DROP TABLE IF EXISTS ".$sql_prefix."events_user");
 		db("DROP TABLE IF EXISTS ".$sql_prefix."events_comments");
@@ -56,7 +58,7 @@ if(isset($_POST['submit'])) {
 			PRIMARY KEY (`id`)) ");
 			
 		db("INSERT INTO ".$sql_prefix."events_kat (`id`, `name`, `katimg`) VALUES (1, 'Events Testkategorie', NULL)");
-		db("INSERT INTO ".$sql_prefix."events_kat (`id`, `name`, `katimg`) VALUES (2, 'übernommene Events', NULL)");
+		db("INSERT INTO ".$sql_prefix."events_kat (`id`, `name`, `katimg`) VALUES (2, 'ï¿½bernommene Events', NULL)");
 		
 		db("CREATE TABLE ".$sql_prefix."events_comments (
 			`id` INT(10) NOT NULL AUTO_INCREMENT,

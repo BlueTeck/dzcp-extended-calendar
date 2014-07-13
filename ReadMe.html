@@ -95,10 +95,10 @@
       <tr>
         <td class="content"><p>Mit diesem AddOn bringt erweitert ihr euren Kalender, hier eine kleine &Uuml;bersicht der Funktionen:</p>
           <ul>
-            <li>Kategorien für Termine</li>
+            <li>Kategorien fï¿½r Termine</li>
             <li>Detaillierte Angaben zu Terminen</li>
-            <li>User können zusagen/absagen</li>
-            <li>Termine können kommentiert werden</li>
+            <li>User k&oouml;nnen zusagen/absagen</li>
+            <li>Termine k&oouml;nnen kommentiert werden</li>
           </ul>
         <p>Bei Problemen, Fehlern, Anregungen oder Fragen, wendet euch gerne an mich.</p></td>
       </tr>
@@ -153,8 +153,8 @@
           </p>
 
 		  
-          <p>In dem Ordner vorhanden, sind Dateien enthalten, die du schon besitzt, wenn du noch keine Änderungen in diesen Dateien gemacht hast, 
-		  kannst du sie einfach überschreiben. Andernsfalls musst du die wie folgt anpassen:</p></td>
+          <p>In dem Ordner vorhanden, sind Dateien enthalten, die du schon besitzt, wenn du noch keine &Auml;nderungen in diesen Dateien gemacht hast, 
+		  kannst du sie einfach ï¿½berschreiben. Andernsfalls musst du die wie folgt anpassen:</p></td>
       </tr>
 	    
 	  <tr>
@@ -204,18 +204,18 @@
       </tr>
       <tr id="show2" style="display: none;">
         <td class="content">
-          Diese Datei ist so klein, die könnt ihr ersetzten, oder einmal die paar Zeilen vergleichen mit dem hier:
+          Diese Datei ist so klein, die kï¿½nnt ihr ersetzten, oder einmal die paar Zeilen vergleichen mit dem hier:
           <p class="codepast">
             <textarea rows="10" wrap="off">
 			<?php
 function events()
 {
-  global $db,$maxevent,$sql_prefix;
+  global $db,$sql_prefix;
 
  $qry = db("SELECT id, name, start FROM ".$sql_prefix."events_info
               WHERE (`start` >= ".time()." OR (`start` <= ".time()." AND `ende` >= ".time().")) AND `show` = 1
               ORDER BY `start`
-              LIMIT ".$maxevent."");
+              LIMIT ".config('m_events')."");
    while($get = _fetch($qry))
    {
      $events = show(_ev_next_event_link, array("datum" => date("d.m.",$get['start']),
@@ -225,7 +225,6 @@ function events()
   	 $eventbox .= show("menu/event", array("events" => $events));
    }
 
-
    return empty($eventbox) ? '<center style="margin:2px 0">'._no_events.'</center>' : '<table class="navContent" cellspacing="0">'.$eventbox.'</table>';;
 }
 ?>
@@ -233,17 +232,17 @@ function events()
 			</textarea></p><br> 
       </tr> 
 	  	  <tr>
-        <td class="datei" id="user" onClick="show(3)"><img src="http://images.dzcp-zone.de/readmes/plus.gif" id="img1">user/index.php</td>
+        <td class="datei" id="user" onClick="show(3)"><img src="http://images.dzcp-zone.de/readmes/plus.gif" id="img1">user/case_userlobby.php</td>
       </tr>
       <tr id="show3" style="display: none;">
         <td class="content">
           <b>Sucht</b> nach:
           <p class="codesearch">
-            <textarea rows="10" wrap="off" readonly>$qrykal = db("SELECT ...</textarea></p><br>
-          löscht nun die folgenden Zeilen bis:
+            <textarea rows="10" wrap="off" readonly>/** Kalender Events anzeigen */</textarea></p><br>
+          l&ouml;scht nun die folgenden Zeilen bis:
 		  <p class="codesearch">
-            <textarea rows="10" wrap="off" readonly>$qryaw = db("SELECT id,postdate ...</textarea></p><br>
-			und fügt stattdessen dies ein:
+            <textarea rows="10" wrap="off" readonly>/** Neue Awards anzeigen */</textarea></p><br>
+			und f&uuml;gt stattdessen dies ein:
           <p class="codepast">
             <textarea rows="10" wrap="off">    $qrykal = db("SELECT count(id) as num, start, ende FROM ".$sql_prefix."events_info
                   WHERE (`start` >= ".time()." OR (`start` <= ".time()." AND `ende` >= ".time().")) AND `show` = 1
@@ -314,7 +313,7 @@ $nextkal = _no_events;
       </tr> 
 	  <tr>
         <td class="content">
-		Nun löscht ihr noch /admin/menu/kalender.php und /admin/menu/kalender.gif.
+		Nun lï¿½scht ihr noch /admin/menu/kalender.php und /admin/menu/kalender.gif.
 		
 		Und wenn ich jetzt ncihts vergessen habe und ihr alles richtig gemacht habt, sollte alles funktionerien.
 	  </td>

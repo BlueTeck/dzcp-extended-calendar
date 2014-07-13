@@ -1,8 +1,4 @@
 <?php
-/////////// ADMINNAVI \\\\\\\\\
-// Typ:       settingsmenu
-// Rechte:    permission('ev_kat')
-///////////////////////////////
 if(_adminMenu != 'true') exit;
 
     $where = $where.': '._config_ev_kats_edit_head;

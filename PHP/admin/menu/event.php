@@ -1,8 +1,4 @@
 <?php
-/////////// ADMINNAVI \\\\\\\\\
-// Typ:       contentmenu
-// Rechte:    permission('editkalender')
-///////////////////////////////
 if(_adminMenu != 'true') exit;
 
   $where = $where.': '._kalender_head;

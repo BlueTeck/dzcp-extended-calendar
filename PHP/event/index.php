@@ -2,6 +2,7 @@
 ## OUTPUT BUFFER START ##
 include("../inc/buffer.php");
 ## INCLUDES ##
+include(basePath."/inc/debugger.php");
 include(basePath."/inc/config.php");
 include(basePath."/inc/bbcode.php");
 ## SETTINGS ##
@@ -82,10 +83,9 @@ case 'show';
 if(!is_numeric($_GET['id'])) {
 	exit;
 	} else {
-  $qry = db("SELECT * FROM ".$sql_prefix."events_info
-             WHERE id = '".$_GET['id']."'");
-  while($get = _fetch($qry))
-  {
+  $get = db("SELECT * FROM ".$sql_prefix."events_info
+             WHERE id = '".$_GET['id']."'",false,true);
+  
 	if($get['show'] == '1') {
 	
 	$title = $pagetitle." - ".$where.": ".re($get['name'])."";
@@ -556,7 +556,7 @@ if($chkMe != "unlogged")
 } else {
   $index = error2(_ev_dont_show,1);
   
-  }}
+  }
 
   //$head = show(_kalender_events_head, array("datum" => date("d.m.Y",$_GET['time'])));
   if($index == "") {
