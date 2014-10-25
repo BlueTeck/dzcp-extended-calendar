@@ -9,7 +9,6 @@ define('_config_ev_kats_katbild', 'Katbild');
 define('_config_ev_kats_kat', 'Kategorie');
 define('_config_ev_kat_deleted', 'Die Kategorie wurde erfolgreich gel&ouml;scht!');
 define('_config_ev_kats_add_head', 'Neue Kategorie hinzuf&uuml;gen');
-define('_config_ev_kats_katbild', 'Katbild');
 define('_config_ev_kats_editid', 'editeventkat&amp;id=[id]');
 define('_ev_foot', '<a href="http://www.modsbar.de/1269/blueteck/"> </a>');
 define('_ev_link_beschreibung', 'Beschreibung');
@@ -36,12 +35,12 @@ define('_ev_ende_datum', 'Enddatum');
 define('_ev_bild', 'Bild');
 define('_ev_comments_write_head', 'Neuen Eventkommentar schreiben');
 define('_ev_next_event_link', '[datum] - <a class="navLastReg" href="../event/?action=show&amp;id=[id]">[event]</a>');
-define('_ev_userlobby_kal_now', 'N&auml;chster Event läuft <a href="../event/?action=list&time=[time]"><span class="fontWichtig">gerade</span></a>');
+define('_ev_userlobby_kal_now', 'N&auml;chster Event l&auml;uft <a href="../event/?action=list&time=[time]"><span class="fontWichtig">gerade</span></a>');
 define('_ev_userlobby_kal_today', 'N&auml;chster Event ist <a href="../event/?action=list&time=[time]"><span class="fontWichtig">heute</span></a>');
 define('_ev_userlobby_kal_not_today', 'N&auml;chster Event ist am <a href="../event/?action=list&time=[time]"><span class="fontUnder">[date]</span></a>');
 define('_ev_filter', 'Filter');
-define('_config_ev_kat_deleted_error', 'Kategorie konnte nicht gelöscht werden, da noch Events mit dieser Kategorie vorhanden sind.');
+define('_config_ev_kat_deleted_error', 'Kategorie konnte nicht gel&ouml;scht werden, da noch Events mit dieser Kategorie vorhanden sind.');
 define('_kalender_error_start_ende', 'Startdatum kann nicht nach dem Enddatum sein!');
 define('_perm_ev_kat', 'Eventkategorien verwalten');
-define('_ev_dont_show', 'Dieses Event ist im moment nicht veröffentlicht.')
+define('_ev_dont_show', 'Dieses Event ist im moment nicht ver&ouml;ffentlicht.')
 ?>
